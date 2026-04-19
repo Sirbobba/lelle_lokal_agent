@@ -1,0 +1,28 @@
+{
+  "name": "local-code-assistant-lelle",
+  "version": "2.0.0",
+  "description": "Lelle Agent v2 — Modern LM Studio REST API + MCP Architecture",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:ui\"",
+    "dev:server": "cd server && npx tsx --watch index.ts",
+    "dev:ui": "cd frontend && npx vite",
+    "build": "cd frontend && npm run build",
+    "start": "cd server && npx tsx index.ts",
+    "install:all": "npm install && cd frontend && npm install"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^16.4.5",
+    "eventsource-parser": "^3.0.0",
+    "express": "^4.19.2",
+    "socket.io": "^4.8.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.8",
+    "concurrently": "^8.2.2",
+    "tsx": "^4.15.7",
+    "typescript": "^5.5.2"
+  }
+}

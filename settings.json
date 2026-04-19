@@ -1,0 +1,8 @@
+{
+  "persona": "senior_partner",
+  "showThoughts": true,
+  "autoExecute": false,
+  "theme": "dark",
+  "modelId": "google/gemma-4-e4b",
+  "maxHistoryMessages": 100
+}

@@ -1,0 +1,31 @@
+{
+  "_instructions": [
+    "Detta är ett EXEMPELKONFIGURATION för LM Studios mcp.json.",
+    "Kopiera innehållet i 'mcpServers' till:",
+    "  C:\\Users\\<ditt-namn>\\.lmstudio\\mcp.json",
+    "och aktivera 'Allow calling servers from mcp.json' i LM Studio → Server Settings.",
+    "",
+    "OBS: Du måste ha Node.js installerat för npx-kommandona nedan.",
+    "Filesystem-servern ger agenten tillgång till att läsa/skriva filer.",
+    "Shell-servern ger agenten tillgång att köra terminalkommandon."
+  ],
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "H:\\LM_Studio_projekt"
+      ],
+      "description": "Fil-hantering — läsa, skriva, lista och radera filer i projektmappen"
+    },
+    "windows-shell": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-everything"
+      ],
+      "description": "Utökat verktygsset (fungerar som fallback om specifika servrar saknas)"
+    }
+  }
+}
